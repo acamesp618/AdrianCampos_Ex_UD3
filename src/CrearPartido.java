@@ -2,7 +2,11 @@
 import java.awt.event.KeyEvent;
 
 
-
+/**
+ * Programa que crea el partido para después realizar las apuestas
+ * 
+ * @author acamesp618
+ */
 public class CrearPartido extends javax.swing.JFrame
 {
    
@@ -15,7 +19,10 @@ public class CrearPartido extends javax.swing.JFrame
         initComponents();
     }
 
-   
+    /**
+     * Abre una ventana nueva donde se añadirá el partido
+     * @param ventana 
+     */
     public CrearPartido(Apuesta ventana) 
     {
         initComponents();
@@ -69,7 +76,11 @@ public class CrearPartido extends javax.swing.JFrame
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    
+    /**
+     * Donde añadiremos el partido realizado entre los dos equipos
+     * @param p 
+     */
     public void añadePartido(String p)
     {
         v.partidoNuevo(p);
