@@ -3,10 +3,11 @@ import javax.swing.DefaultListModel;
 import javax.swing.JDialog;
 import javax.swing.WindowConstants;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * Programa para añadir partidos y realizar aleatoriamente los
+ * resultados de una quiniela
+ * 
+ * @author acamesp618
  */
 
 public class Apuesta extends javax.swing.JFrame {
@@ -140,12 +141,21 @@ public class Apuesta extends javax.swing.JFrame {
         this.listaResultados.setModel(modelovacio);
     }//GEN-LAST:event_bResetearActionPerformed
 
-   
+    /**
+     * Determina la aleatorización del resultado
+     * @param n1
+     * @param n2
+     * @return Devuelve un número aleatorio
+     */
     public int cualquiera(int n1, int n2)
     {
         return (int)Math.floor((Math.random()*(n2-n1+1) + n1));
     }
     
+    /**
+     * Es la función que determina el resultado de la quiniela
+     * @param evt 
+     */
     private void bRealizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bRealizarActionPerformed
         DefaultListModel modeloquinielaresuelta = new DefaultListModel();
 
@@ -172,7 +182,10 @@ public class Apuesta extends javax.swing.JFrame {
         this.listaResultados.setModel(modeloquinielaresuelta);
     }//GEN-LAST:event_bRealizarActionPerformed
 
-    
+    /**
+     * Añade el partido al programa
+     * @param partido Parámetro que define el partido entre dos equipos
+     */
     public void partidoNuevo(String partido)
     {
         DefaultListModel modelonuevo = new DefaultListModel();
@@ -186,7 +199,10 @@ public class Apuesta extends javax.swing.JFrame {
         this.listaQuiniela.setModel(modelonuevo);
     }
     
-  
+    /**
+     * Borra el partido que se haya añadido al programa
+     * @param indice Párametro que identifica a cada partido
+     */
     public void borraPartido(int indice)
     {
         DefaultListModel modelonuevoquiniela = new DefaultListModel();
